@@ -3,13 +3,15 @@
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 import { runMCPServer } from './server.js';
+import { homedir } from 'os';
+import { join } from 'path';
 
 const config = {
   name: 'vec-memory-mcp',
   version: '1.0.0',
   memory: {
     database: {
-      dbPath: process.env.MEMORY_DB_PATH || './memory.db',
+      dbPath: process.env.MEMORY_DB_PATH || join(homedir(), '.vec-memory-mcp.db'),
       enableWAL: true
     },
     ollama: {

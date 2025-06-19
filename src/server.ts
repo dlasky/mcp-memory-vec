@@ -185,12 +185,14 @@ export async function createMCPServer(config: MCPServerConfig = {}): Promise<Ser
     await ensureOllamaRunning(config.memory?.ollama);
     await ensureModelExists(config.memory?.ollama);
   } catch (error) {
+    console.error('Failed to initialize Ollama:', error);
     throw error;
   }
   
   try {
     initializeMemory(config.memory);
   } catch (error) {
+    console.error('Failed to initialize memory database:', error);
     throw error;
   }
   

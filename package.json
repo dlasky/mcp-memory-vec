@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "MCP server with SQLite vec0 and Ollama embeddings for graph-based semantic memory",
   "main": "dist/index.js",
+  "bin": {
+    "vec-memory-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
   "type": "module",
   "scripts": {
     "build": "tsc",
@@ -10,7 +18,8 @@
     "dev": "tsx src/index.ts",
     "test": "jest",
     "lint": "eslint src/**/*.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "mcp",

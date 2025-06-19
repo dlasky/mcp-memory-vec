@@ -20,6 +20,27 @@ An MCP (Model Context Protocol) server that provides graph-based semantic memory
 
 ## Installation
 
+### From npm (recommended)
+
+Add to your MCP client configuration:
+
+```json
+{
+  "mcpServers": {
+    "memory": {
+      "command": "npx",
+      "args": ["vec-memory-mcp"]
+    }
+  }
+}
+```
+
+The server will be automatically downloaded and started when needed.
+
+> **Note**: The server will automatically start Ollama if it's not already running and download the required embedding model if needed.
+
+### From source
+
 ```bash
 npm install
 npm run build

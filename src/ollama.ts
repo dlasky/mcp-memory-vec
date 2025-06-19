@@ -70,9 +70,7 @@ export async function ensureModelExists(config: OllamaConfig = {}): Promise<void
   }
   
   try {
-    console.log(`Pulling model ${fullConfig.model}...`);
     await pullModel(fullConfig.model, fullConfig.baseUrl);
-    console.log(`Model ${fullConfig.model} installed successfully`);
   } catch (error) {
     throw new Error(
       `Failed to pull model '${fullConfig.model}'. Please check:\n` +

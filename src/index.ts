@@ -47,7 +47,6 @@ async function main() {
   try {
     await runMCPServer(serverConfig);
   } catch (error) {
-    console.error('Failed to start MCP server:', error);
     process.exit(1);
   }
 }

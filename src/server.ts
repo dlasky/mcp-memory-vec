@@ -404,6 +404,5 @@ export async function runMCPServer(config: MCPServerConfig = {}): Promise<void> 
   } else {
     const transport = new StdioServerTransport();
     await server.connect(transport);
-    await transport.start();
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "vec-memory-mcp",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "MCP server with SQLite vec0 and Ollama embeddings for graph-based semantic memory",
   "main": "dist/index.js",
   "bin": {
